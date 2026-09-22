@@ -45,11 +45,14 @@
     <header class="hero">
       <div class="hero-slides">
         <div class="hero-slide active">
-          <img
-            src="images/Trident.png"
-            alt="Grey Bricks flagship architectural development"
-            loading="eager"
-          />
+          <picture>
+            <source media="(max-width: 720px)" srcset="images/hero-trident-mob.png" />
+            <img
+              src="images/hero-trident.png"
+              alt="Grey Bricks flagship architectural development"
+              loading="eager"
+            />
+          </picture>
           <div class="hero-slide-info container">
             <span class="eyebrow on-dark"
               >Grey Bricks &mdash; Real Estate Developers</span
@@ -74,11 +77,14 @@
         </div>
 
         <div class="hero-slide">
-          <img
-            src="images/hero-highfold.jpg"
-            alt="Highfold — commercial development, City Centre"
-            loading="eager"
-          />
+          <picture>
+            <source media="(max-width: 720px)" srcset="images/hero-highfold-mob.jpg" />
+            <img
+              src="images/hero-highfold.jpg"
+              alt="Highfold — commercial development, City Centre"
+              loading="eager"
+            />
+          </picture>
           <div class="hero-slide-info container">
             <span class="eyebrow on-dark">Commercial &middot; City Centre</span>
             <h1 style="font-size: clamp(2.2rem, 4.6vw, 3.6rem)">Highfold</h1>
@@ -95,11 +101,14 @@
         </div>
 
         <div class="hero-slide">
-          <img
-            src="images/hero-businesscube.jpg"
-            alt="Business Cube — commercial development, Shahupuri"
-            loading="eager"
-          />
+          <picture>
+            <source media="(max-width: 720px)" srcset="images/hero-businesscube-mob.jpg" />
+            <img
+              src="images/hero-businesscube.jpg"
+              alt="Business Cube — commercial development, Shahupuri"
+              loading="eager"
+            />
+          </picture>
           <div class="hero-slide-info container">
             <span class="eyebrow on-dark">Commercial &middot; Shahupuri</span>
             <h1 style="font-size: clamp(2.2rem, 4.6vw, 3.6rem)">
@@ -118,11 +127,14 @@
         </div>
 
         <div class="hero-slide">
-          <img
-            src="images/Mark_1034.jpg"
-            alt="Mark 1034 — commercial landmark, Parvati Talkies"
-            loading="eager"
-          />
+          <picture>
+            <source media="(max-width: 720px)" srcset="images/hero-mark1034-mob.jpg" />
+            <img
+              src="images/hero-mark1034.jpg"
+              alt="Mark 1034 — commercial landmark, Parvati Talkies"
+              loading="eager"
+            />
+          </picture>
           <div class="hero-slide-info container">
             <span class="eyebrow on-dark"
               >Commercial &middot; Parvati Talkies</span
@@ -141,16 +153,19 @@
         </div>
 
         <div class="hero-slide">
-          <img
-            src="images/Time_Square.jpg"
-            alt="Time Square — upcoming commercial destination, Parvati Talkies"
-            loading="eager"
-          />
+          <picture>
+            <source media="(max-width: 720px)" srcset="images/hero-timesquare-mob.jpg" />
+            <img
+              src="images/hero-timesquare.jpg"
+              alt="Time Square — ongoing commercial destination, Parvati Talkies"
+              loading="eager"
+            />
+          </picture>
           <div class="hero-slide-info container">
-            <span class="eyebrow on-dark">Commercial &middot; Upcoming</span>
+            <span class="eyebrow on-dark">Commercial &middot; Ongoing</span>
             <h1 style="font-size: clamp(2.2rem, 4.6vw, 3.6rem)">Time Square</h1>
             <p class="lead" style="max-width: 38ch">
-              Premium offices from 400&ndash;1,000 sq. ft. at Parvati Talkies
+              Premium offices from 400&ndash;5,000 sq. ft. at Parvati Talkies
               &mdash; the future destination for business excellence.
             </p>
             <div class="hero-cta">
@@ -286,7 +301,7 @@
             <div class="p-card-media">
               <span class="p-card-status">Completed</span
               ><img
-                src="images/proj-trident.jpg"
+                src="images/hero-trident.png"
                 alt="Trident residential development"
               />
             </div>
@@ -352,10 +367,10 @@
 
           <article class="p-card r-item">
             <div class="p-card-media">
-              <span class="p-card-status">Completed</span
+              <span class="p-card-status">Ongoing</span
               ><img
-                src="images/hero-mark1034.jpg"
-                alt="Mark 1034 commercial development"
+                src="images/hero-timesquare.jpg"
+                alt="Time Square commercial development"
               />
             </div>
             <div class="p-card-body">
@@ -363,13 +378,13 @@
                 <span class="brick-mark"><i></i><i></i><i></i><i></i></span
                 >Commercial &middot; Uptown
               </div>
-              <h3>Mark 1034</h3>
+              <h3>Time Square</h3>
               <p class="p-card-loc">Parvati Talkies, Kolhapur</p>
               <p class="p-card-desc">
                 Located in a thriving, high-footfall destination &mdash; a
                 prestigious address for growing businesses.
               </p>
-              <a href="projects.html#mark-1034" class="p-card-link"
+              <a href="projects.html#time-square" class="p-card-link"
                 >View Project
                 <svg
                   width="16"
@@ -669,10 +684,7 @@
                 gap: 18px;
               "
             >
-              <a
-                href="tel:+919172732323"
-                style="display: flex; align-items: center; gap: 14px"
-              >
+            <div style="display: flex; align-items: center; gap: 14px">
                 <span
                   style="
                     width: 26px;
@@ -697,10 +709,10 @@
                 <span
                   ><strong style="font-family: var(--display)">Phone</strong
                   ><br /><span style="color: var(--grey)"
-                    >+91 91727 32323</span
+                    >+91 91727 32323, +91 98231 00791</span
                   ></span
                 >
-              </a>
+              </div>
               <div style="display: flex; align-items: center; gap: 14px">
                 <span
                   style="
@@ -726,7 +738,11 @@
                 <span
                   ><strong style="font-family: var(--display)">Office</strong
                   ><br /><span style="color: var(--grey)"
-                    >Kolhapur, Maharashtra &mdash; address to be announced</span
+                    >395/2 E ward, Square 9, 4th floor, Assembly Road, 
+                    </br>
+                    Shahupuri, Kolhapur.
+                    </br>
+                    416002</span
                   ></span
                 >
               </div>
@@ -832,14 +848,19 @@
           </div>
           <div class="footer-col">
             <h4>Contact</h4>
-            <a href="tel:+919172732323">+91 91727 32323</a>
+            <span style="color: var(--grey-light); font-size: 0.92rem">+91 91727 32323, +91 98231 00791</span>
+            <h4 style="margin-top: 16px">Address</h4>
             <span
               style="
                 display: block;
                 color: var(--grey-light);
                 font-size: 0.92rem;
               "
-              >Kolhapur, Maharashtra</span
+              >395/2 E ward, Square 9, 4th floor, Assembly Road, 
+              </br>
+              Shahupuri, Kolhapur.
+              </br>
+              416002</span
             >
           </div>
         </div>

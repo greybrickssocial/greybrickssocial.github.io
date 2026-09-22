@@ -1473,7 +1473,7 @@ p.lead {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../images/hero-02.jpg");
+  background-image: url("../images/hero-trident.png");
   background-size: cover;
   background-position: center;
   opacity: 0.22;
@@ -1587,5 +1587,39 @@ p.lead {
   .page-hero {
     padding-top: 150px;
     padding-bottom: 60px;
+  }
+  .page-hero::before {
+    background-image: url("../images/hero-trident-mob.png");
+  }
+
+  /* ---- Hero carousel mobile ---- */
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  .hero-slide img {
+    object-fit: cover;
+    object-position: top center;
+    transform: none;
+    transition: none;
+  }
+  .hero-slide.active img {
+    transform: none;
+  }
+  .hero-slide-info {
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero-slide-info h1 {
+    font-size: 1.8rem;
+  }
+  .hero-slide-info .lead {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+  .hero-cta .btn {
+    padding: 12px 24px;
+    font-size: 0.85rem;
   }
 }
