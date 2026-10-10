@@ -1505,6 +1505,49 @@ p.lead {
 }
 
 /* ============================================================
+   CONTACT FORM
+   ============================================================ */
+.contact-form [aria-invalid='true'] {
+  border-color: #b4472e !important;
+  background: #fdf6f4 !important;
+}
+.contact-submit[disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.contact-form .form-note {
+  font-size: 0.85rem;
+  min-height: 1.3em;
+  text-align: center;
+  margin: 0;
+  transition: color var(--fast) var(--ease);
+}
+.contact-form .form-note.is-pending {
+  color: var(--grey);
+}
+.contact-form .form-note.is-success {
+  color: #2f6b46;
+}
+.contact-form .form-note.is-error {
+  color: #b4472e;
+}
+.contact-form .form-debug {
+  display: block;
+  margin: 0;
+  padding: 10px 12px;
+  background: #141210;
+  color: #e4d3b4;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  text-align: left;
+  word-break: break-word;
+}
+.contact-form .form-debug[hidden] {
+  display: none;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1080px) {

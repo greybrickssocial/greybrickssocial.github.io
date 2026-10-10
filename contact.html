@@ -297,8 +297,37 @@
 
             <form
               class="contact-form"
+              novalidate
               style="display: flex; flex-direction: column; gap: 20px"
             >
+              <!-- spam trap: hidden from people, filled in by bots -->
+              <div
+                aria-hidden="true"
+                style="
+                  position: absolute;
+                  left: -9999px;
+                  width: 1px;
+                  height: 1px;
+                  overflow: hidden;
+                "
+              >
+                <label for="company_website">Company website</label>
+                <input
+                  id="company_website"
+                  name="company_website"
+                  type="text"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+
+              <!-- context fields, filled in by js/main.js before sending -->
+              <input type="hidden" name="email_subject" value="" />
+              <input type="hidden" name="enquiry_type" value="" />
+              <input type="hidden" name="source_page" value="" />
+              <input type="hidden" name="submitted_at" value="" />
+              <input type="hidden" name="recipient" value="" />
+
               <div>
                 <label
                   for="fullname"
@@ -318,6 +347,7 @@
                   name="fullname"
                   type="text"
                   required
+                  autocomplete="name"
                   placeholder="Your full name"
                   style="
                     width: 100%;
@@ -349,6 +379,9 @@
                     name="mobile"
                     type="tel"
                     required
+                    autocomplete="tel"
+                    inputmode="tel"
+                    maxlength="20"
                     placeholder="+91 00000 00000"
                     style="
                       width: 100%;
@@ -377,6 +410,7 @@
                     name="email"
                     type="email"
                     required
+                    autocomplete="email"
                     placeholder="you@example.com"
                     style="
                       width: 100%;
@@ -474,18 +508,19 @@
                   "
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-block">
-                Send Message <span class="btn-arrow">&rarr;</span>
+              <button
+                type="submit"
+                class="btn btn-primary btn-block contact-submit"
+              >
+                <span class="contact-submit-label">Send Message</span>
+                <span class="btn-arrow">&rarr;</span>
               </button>
               <p
                 class="form-note"
-                style="
-                  font-size: 0.85rem;
-                  color: var(--gold);
-                  min-height: 1.2em;
-                  text-align: center;
-                "
+                role="status"
+                aria-live="polite"
               ></p>
+              <p class="form-debug" hidden></p>
             </form>
           </div>
         </div>
@@ -577,6 +612,8 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+    <script src="js/config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
