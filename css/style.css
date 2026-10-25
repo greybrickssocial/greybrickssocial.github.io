@@ -1473,7 +1473,7 @@ p.lead {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../images/hero-trident.png");
+  background-image: url("../images/hero-trident.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.22;
@@ -1632,7 +1632,7 @@ p.lead {
     padding-bottom: 60px;
   }
   .page-hero::before {
-    background-image: url("../images/hero-trident-mob.png");
+    background-image: url("../images/hero-trident-mob.jpg");
   }
 
   /* ---- Hero carousel mobile ---- */
